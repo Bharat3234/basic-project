@@ -1,0 +1,23 @@
+<h1>This is Users Component</h1>
+<button>Add User</button>
+<table>
+    <tr>
+        <td>User Id</td>
+        <td>User Name</td>
+        <td>Email</td>
+        <td>Region</td>
+        <td>Action</td>
+    </tr>
+    <tr *ngFor="let us of userData">
+        <td>{{us.userID}}</td>
+        <td>{{us.userName}}</td>
+        <td>{{us.email}}</td>
+        <td>{{us.address}}</td>
+        <td>
+            <button style="margin-right: 5px" [routerLink]="['/asdfvgb']">Wrong route</button>
+            <button style="margin-right: 5px" [routerLink]="['/user', us.userID]">With Params</button>
+            <button style="margin-right: 5px" [routerLink]="['/user']" [queryParams]="{ userID: us.userID, userName: us.userName}">With Query params</button>
+            <button (click)="goToSingle(us.userID)">Navigate</button>
+        </td>
+    </tr>
+</table>

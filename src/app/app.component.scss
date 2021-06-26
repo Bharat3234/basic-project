@@ -1,0 +1,15 @@
+ul {
+    padding-left: 0;
+    li {
+        float: left;
+        list-style: none;
+        padding: 10px 15px;
+        background-color: beige;
+        margin: 0 5px;
+        border-radius: 5px;
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+    }
+}
