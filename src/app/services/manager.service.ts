@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,6 +7,7 @@ import { Injectable } from '@angular/core';
 
 export class ManagerService {
 
+  serverURL = 'http://localhost:8080';
   userDetails = [
     {
       userID: 'US123',
@@ -27,5 +29,19 @@ export class ManagerService {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private httpClient: HttpClient
+  ) { }
+
+  getRequest(url: string) {
+    console.log('URL from manager.service.ts :', url);
+    return this.httpClient.get(`${this.serverURL}/${url}`);
+  }
+
+  postRequest(url: string, data: object) {
+    console.log('URL from manager.service.ts :', url);
+    console.log('data :', data);
+    return this.httpClient.post(`${this.serverURL}/${url}`, data);
+  }
+
 }

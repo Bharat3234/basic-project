@@ -1,1 +1,8 @@
 <h1>This is Orders Component</h1>
+<button (click)="getData()">Get Data</button>
+
+<ul *ngFor="let user of data">
+    <li>
+        <a [routerLink]="['/user', user.id]">{{user.id}}. {{user.title}}</a>
+    </li>
+</ul>
