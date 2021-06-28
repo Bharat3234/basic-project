@@ -1,17 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent implements OnInit, OnDestroy {
 
   productDetails: any = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Products component initialized [ngOnInit]');
     this.productDetails = [
       {
         userName: 'Bharat Biotech',
@@ -38,6 +39,10 @@ export class ProductsComponent implements OnInit {
         price: 101
       }
     ];
+  }
+
+  ngOnDestroy(): void {
+    console.log('Products component destroyed [ngOnDestroy]');
   }
 
 }
