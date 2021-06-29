@@ -1,0 +1,12 @@
+<p>cart works!</p>
+
+<button (click)="getData()">Get Data From Server</button>
+
+<br/>
+<div>
+    <input type="text" placeholder="name" #name>
+    <input type="text" placeholder="age" #age>
+    <input type="text" placeholder="address" #address>
+    
+    <button (click)="clicked(name.value, age.value, address.value)">Hit my server</button>
+</div>

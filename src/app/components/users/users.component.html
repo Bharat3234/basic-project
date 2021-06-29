@@ -1,4 +1,11 @@
 <h1>This is Users Component</h1>
+
+<button [routerLink]="['/cart', 'US123', 'Abhay Sharma']">Click Me</button>
+
+<div>
+    <button [routerLink]="['/cart']" [queryParams]="{ userID: '123465', name: 'Dummy' }">Click here again</button>
+</div>
+
 <button (click)="addUser()">Add User</button>
 <table>
     <tr>
