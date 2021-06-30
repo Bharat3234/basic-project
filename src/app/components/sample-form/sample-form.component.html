@@ -1,0 +1,62 @@
+<p>sample-form works!</p>
+
+<h1>Form Group</h1>
+<form [formGroup]="studentForm" (ngSubmit)="submitReactiveForm()">
+    <div>
+        <input type="text" placeholder="First Name" formControlName="firstName">
+    </div>
+    <div>
+        <input type="text" placeholder="Last Name" formControlName="lastName">
+    </div>
+    <div formGroupName="contact">
+        <h4>Contact Details</h4>
+        <div>
+            <input type="text" placeholder="Mobile" formControlName="mobile">
+        </div>
+        <div>
+            <input type="text" placeholder="Landline" formControlName="landline">
+        </div>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+
+
+<h1>Simple Form Control</h1>
+
+<input type="text" placeholder="Color" [formControl]="colorControl">
+<div *ngIf="colorControl.touched && colorControl.dirty">
+    <h6 *ngIf="colorControl.errors?.required" style="color: 'red'">Name is required</h6>
+    <h6 *ngIf="colorControl.errors?.minlength" style="color: 'red'">Please enter minimum 2 characters</h6>
+    <h6 *ngIf="colorControl.errors?.maxlength" style="color: 'red'">Maximum 5 characters are allowed</h6>
+</div>
+<button (click)="submitForm()">Submit Reactive Form</button>
+
+<h2>{{colorControl.status}}</h2>
+
+<h1>{{colorControl.value}}</h1>
+
+<button (click)="changeName()">Set value</button>
+
+
+
+
+
+<!-- 
+1. Reactive Form
+    [SETUP] - created inside component
+    [VALIDATION] - Functions
+    SCALABLE
+
+
+2. Template Driven Form
+    [SETUP] - using directive
+    [VALIDATION] - directives
+    NON-SCALABLE
+
+
+    FormControl
+    FormGroup
+
+-->

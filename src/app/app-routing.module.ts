@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { ProductsComponent } from './components/products/products.component';
+import { SampleFormComponent } from './components/sample-form/sample-form.component';
 import { SingleUserComponent } from './components/single-user/single-user.component';
 import { UsersComponent } from './components/users/users.component';
 
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path: 'cart/:userID/:userName',
     component: CartComponent
+  },
+  {
+    path: 'form',
+    component: SampleFormComponent
   },
   {
     path: '**',
