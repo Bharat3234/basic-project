@@ -20,6 +20,12 @@ export class SampleFormComponent implements OnInit {
     })
   });
 
+  user = { name: '', course: '', age: '', address: '' };
+
+  num1 = 5;
+  num2 = 5;
+
+
   constructor() { }
 
   ngOnInit(): void {
@@ -37,4 +43,7 @@ export class SampleFormComponent implements OnInit {
     console.log(this.studentForm);
   }
 
+  submitTemplateForm() {
+    console.log('this.user :', this.user);
+  }
 }

@@ -1,5 +1,40 @@
-<p>sample-form works!</p>
+<h1 *ngIf="num1 == num2">Hello</h1>
 
+
+<h1>Template Driven Form</h1>
+
+
+<form (ngSubmit)="submitTemplateForm()">
+
+    <div>
+        <input type="text" name="myName" id="myName" required minlength="5" [(ngModel)]="user.name" #name="ngModel">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)">
+            <div style="color: red;" *ngIf="name.errors?.required">Name is required</div>
+            <div style="color: red;" *ngIf="name.errors?.minlength">Name must be at least 5 characters</div>
+        </div>
+    </div>
+    
+    <div>
+        <input type="text" name="myCourse" id="myCourse" required [(ngModel)]="user.course" #course="ngModel">
+        <div *ngIf="course.dirty || course.touched">
+            <div style="color: red;" *ngIf="course.errors?.required">Course is required</div>
+        </div>
+    </div>
+
+    <div>
+        <input type="text" name="myAge" id="myAge" [(ngModel)]="user.age" #age="ngModel">
+    </div>
+
+    <div>
+        <input type="text" name="myAddress" id="myAddress" [(ngModel)]="user.address" #address="ngModel">
+    </div>
+    
+    <button type="submit">Submit</button>
+
+</form>
+
+
+<p>=============================================================</p>
 <h1>Form Group</h1>
 <form [formGroup]="studentForm" (ngSubmit)="submitReactiveForm()">
     <div>
