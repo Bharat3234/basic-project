@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AnimationComponent } from './components/animation/animation.component';
 import { CartComponent } from './components/cart/cart.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -50,6 +51,10 @@ const routes: Routes = [
   {
     path: 'form',
     component: SampleFormComponent
+  },
+  {
+    path: 'animation',
+    component: AnimationComponent
   },
   {
     path: '**',

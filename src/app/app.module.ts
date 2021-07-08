@@ -14,7 +14,9 @@ import { SampleFormComponent } from './components/sample-form/sample-form.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-
+import { AnimationComponent } from './components/animation/animation.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,8 @@ import { environment } from '../environments/environment';
     NotFoundComponent,
     HomeComponent,
     CartComponent,
-    SampleFormComponent
+    SampleFormComponent,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
