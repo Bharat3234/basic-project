@@ -16,6 +16,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { AnimationComponent } from './components/animation/animation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminComponent } from './components/admin/admin.component';
+import { FinanceComponent } from './components/finance/finance.component';
+import { AccountsComponent } from './components/accounts/accounts.component';
  
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     CartComponent,
     SampleFormComponent,
-    AnimationComponent
+    AnimationComponent,
+    AdminComponent,
+    FinanceComponent,
+    AccountsComponent
   ],
   imports: [
     BrowserModule,

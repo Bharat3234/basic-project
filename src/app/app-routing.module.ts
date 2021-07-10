@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AccountsComponent } from './components/accounts/accounts.component';
+import { AdminComponent } from './components/admin/admin.component';
 import { AnimationComponent } from './components/animation/animation.component';
 import { CartComponent } from './components/cart/cart.component';
+import { FinanceComponent } from './components/finance/finance.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { OrdersComponent } from './components/orders/orders.component';
@@ -55,6 +58,25 @@ const routes: Routes = [
   {
     path: 'animation',
     component: AnimationComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: '/admin/accounts'
+      },
+      {
+        path: 'accounts',
+        component: AccountsComponent
+      },
+      {
+        path: 'finance',
+        component: FinanceComponent
+      }
+    ]
   },
   {
     path: '**',

@@ -1,0 +1,30 @@
+<!-- <div [@circle-anim]="stateName" style="height: 100px; width: 100px; background: red;"></div>
+
+<button (click)="changeState('square')">Active state Square</button>
+<button (click)="changeState('middle')">Active state Middle</button>
+<button (click)="changeState('round')">Active state Round</button> -->
+
+<div style="width: 100%; display: flex;">
+    <div style="width: 20%;">
+        <ul style="border: 1px solid red;">
+            <li>
+                <a routerLink="/admin/accounts">Account</a>
+            </li>
+
+            <li>
+                <a routerLink="/admin/finance">Finance</a>
+            </li>
+
+            <li>
+                <a>HRMS</a>
+            </li>
+
+            <li>
+                <a>CRMS</a>
+            </li>
+        </ul>
+    </div>
+    <div style="width: 80%; border: 1px solid black;">
+        <router-outlet></router-outlet>
+    </div>
+</div>
