@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminComponent } from './components/admin/admin.component';
 import { FinanceComponent } from './components/finance/finance.component';
 import { AccountsComponent } from './components/accounts/accounts.component';
+import { RoundProgressModule } from 'angular-svg-round-progressbar';
  
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { AccountsComponent } from './components/accounts/accounts.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    RoundProgressModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
