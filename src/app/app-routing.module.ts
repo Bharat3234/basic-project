@@ -12,6 +12,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { SampleFormComponent } from './components/sample-form/sample-form.component';
 import { SingleUserComponent } from './components/single-user/single-user.component';
 import { UsersComponent } from './components/users/users.component';
+import { UserGuard } from './guards/user.guard';
 
 const routes: Routes = [
   {
@@ -25,7 +26,8 @@ const routes: Routes = [
   },
   {
     path: 'products',
-    component: ProductsComponent
+    component: ProductsComponent,
+    canActivate: [UserGuard]
   },
   {
     path: 'orders',

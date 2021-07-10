@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 
 export class ManagerService {
 
+  userType = 'ADMIN';
   serverURL = 'http://localhost:8080';
   userDetails = [
     {
