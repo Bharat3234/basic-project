@@ -20,6 +20,8 @@ export class HomeComponent implements
   @Input() dataFromParent = 'QWERTY';
   todoData: any = [];
 
+  imageURL = 'https://picsum.photos/200/200';
+
   constructor(
     private httpClient: HttpClient
   ) { }
@@ -32,6 +34,9 @@ export class HomeComponent implements
   ngOnInit(): void {
     console.log('Home Component Initialized [ngOnInit]');
     this.fetchData();
+    setTimeout(() => {
+      this.imageURL = 'https://picsum.photos/300/300';
+    }, 3000);
   }
 
   ngDoCheck(): void {
