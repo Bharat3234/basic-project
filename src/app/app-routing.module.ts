@@ -80,6 +80,15 @@ const routes: Routes = [
       }
     ]
   },
+  // lazy-loading module
+  {
+    path: 'customer',
+    loadChildren: () => import('./modules/customer/customer.module').then(m => m.CustomerModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule)
+  },
   {
     path: '**',
     component: NotFoundComponent
