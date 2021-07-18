@@ -20,6 +20,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { FinanceComponent } from './components/finance/finance.component';
 import { AccountsComponent } from './components/accounts/accounts.component';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
  
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { RoundProgressModule } from 'angular-svg-round-progressbar';
     AnimationComponent,
     AdminComponent,
     FinanceComponent,
-    AccountsComponent
+    AccountsComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
